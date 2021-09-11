@@ -11,7 +11,8 @@ We wanted to keep it simple so we wouldn’t get confused at the beginning of ou
 If we had more time, the bot could have a better logical conversation with more functions.
 
 ## View it live
-https://djbot-katie-pinar.netlify.app/
+https://djbot-katie-pinar.netlify.app
+https://djbot-pinar-katie.netlify.app
 
 
 //Pinar and Katie 
