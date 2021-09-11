@@ -3,10 +3,13 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   background: #0026ff;
+  background-image: url(./rob.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -48,12 +51,12 @@ input {
 }
 
 main {
-  margin: 0 auto;
+  margin: 100px auto;
   width: 100%;
-  max-width: 700px;
-  height: 600px;
+  max-width:700px;
+  height: 700px;
   border-radius: 30px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
   padding: 20px 24px;
   padding-top: 0;
   box-sizing: border-box;
@@ -95,7 +98,7 @@ main {
   font-size: 16px;
   line-height: 26px;
   padding: 16px 24px;
-  color: #0026ff;
+  color: #000;
   max-width: 40%;
 }
 
@@ -138,3 +141,64 @@ button:hover {
   opacity: 0.9;
   transition: all 0.2s ease;
 }
+
+.start-page {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(182, 146, 25, 0.5);
+  top: 0%;
+  left: 0%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button {
+  width: 300px;
+  height: 100px;
+  border-radius: 30px;
+  margin: auto;
+  display: block;
+ }
+
+#selectStudy, #selectParty{ 
+border: none;
+border-radius: 3px;
+color: #0026ff;
+font-size: 16px;
+height: 60px;
+font-weight: 500;
+font-family: 'Montserrat';
+background: #e5e9ff;
+width: 100%;
+padding: 0 10px;
+cursor: pointer;
+-webkit-appearance: none;
+} 
+
+footer {
+  text-align: center;
+  background-color: black;
+  padding-bottom: 10px;
+  color: rgb(213, 212, 212);
+}
+
+.footer-info {
+  padding-top: 10px;
+  margin: 0;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.technigo {
+  text-decoration: none;
+  color: blue;
+}
+
+.technigo:hover {
+  color: orange;
+} 
