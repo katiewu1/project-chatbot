@@ -6,7 +6,7 @@ const nameForm = document.getElementById("name-form");
 const startButton = document.getElementById("startButton");
 const startPage = document.getElementById("startPage");
 const inputWrapper = document.getElementById("input-wrapper");
-const messageAudio = new Audio("./message-pop-alert.mp3");
+const messageAudio = new Audio("/music/message-pop-alert.mp3");
 
 //FUNCTIONS
 
@@ -19,13 +19,13 @@ const showMessage = (message, sender) => {
         <div class="bubble user-bubble">
           <p>${message}</p>
         </div>
-        <img src="assets/fox.svg" alt="User" />  
+        <img src="/assets/fox.svg" alt="User" />  
       </section>
     `;
   } else if (sender === "bot") {
     chat.innerHTML += `
       <section class="bot-msg">
-        <img src="assets/alienMonster.svg" alt="Bot" />
+        <img src="/assets/alienMonster.svg" alt="Bot" />
         <div class="bubble bot-bubble">
           <p>${message}</p>
         </div>
@@ -174,7 +174,7 @@ const playMusic = () => {
   );
   inputWrapper.innerHTML = `
   <audio controls loop> 
-  <source src="./automatik.mp3" type= "audio/mp3"> Your browser does not support the audio tag. 
+  <source src="/music/automatik.mp3" type= "audio/mp3"> Your browser does not support the audio tag. 
   </audio>
     `;
 };
