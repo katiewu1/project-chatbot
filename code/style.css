@@ -5,7 +5,7 @@
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: #0026ff;
   background-image: url(./rob.png);
   background-size: 100%;
@@ -44,7 +44,7 @@ input {
   color: #0026ff;
   padding: 16px;
   font-size: 16px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 600;
   line-height: 26px;
   flex: 1;
@@ -53,7 +53,7 @@ input {
 main {
   margin: 100px auto;
   width: 100%;
-  max-width:700px;
+  max-width: 700px;
   height: 700px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.7);
@@ -131,7 +131,7 @@ button {
   margin-right: 4px;
   font-size: 16px;
   line-height: 26px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -162,22 +162,23 @@ button:hover {
   border-radius: 30px;
   margin: auto;
   display: block;
- }
+}
 
-#selectStudy, #selectParty{ 
-border: none;
-border-radius: 3px;
-color: #0026ff;
-font-size: 16px;
-height: 60px;
-font-weight: 500;
-font-family: 'Montserrat';
-background: #e5e9ff;
-width: 100%;
-padding: 0 10px;
-cursor: pointer;
--webkit-appearance: none;
-} 
+#selectStudy,
+#selectParty {
+  border: none;
+  border-radius: 3px;
+  color: #0026ff;
+  font-size: 16px;
+  height: 60px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  background: #e5e9ff;
+  width: 100%;
+  padding: 0 10px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
 
 footer {
   text-align: center;
@@ -189,7 +190,7 @@ footer {
 .footer-info {
   padding-top: 10px;
   margin: 0;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 10px;
   line-height: 10px;
 }
@@ -201,4 +202,4 @@ footer {
 
 .technigo:hover {
   color: orange;
-} 
+}
