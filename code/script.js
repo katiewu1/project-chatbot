@@ -1,19 +1,18 @@
 // All the DOM selectors stored as short variables
-const chat = document.getElementById("chat");
-const userInput = document.getElementById("user-input");
-const sendBtn = document.getElementById("send-btn");
-const nameForm = document.getElementById("name-form");
-const startButton = document.getElementById("startButton");
-const startPage = document.getElementById("startPage");
-const inputWrapper = document.getElementById("input-wrapper");
-const messageAudio = new Audio("/music/message-pop-alert.mp3");
+const chat = document.getElementById('chat');
+const userInput = document.getElementById('user-input');
+const sendBtn = document.getElementById('send-btn');
+const nameForm = document.getElementById('name-form');
+const startButton = document.getElementById('startButton');
+const startPage = document.getElementById('startPage');
+const inputWrapper = document.getElementById('input-wrapper');
+const messageAudio = new Audio('/music/message-pop-alert.mp3');
 
 //FUNCTIONS
 
 // This function will add a chat bubble in the correct place based on who the sender is
 const showMessage = (message, sender) => {
-  if (sender === "user") {
-    console.log("Hello!");
+  if (sender === 'user') {
     chat.innerHTML += `
       <section class="user-msg">
         <div class="bubble user-bubble">
@@ -22,7 +21,7 @@ const showMessage = (message, sender) => {
         <img src="/assets/fox.svg" alt="User" />  
       </section>
     `;
-  } else if (sender === "bot") {
+  } else if (sender === 'bot') {
     chat.innerHTML += `
       <section class="bot-msg">
         <img src="/assets/alienMonster.svg" alt="Bot" />
@@ -42,35 +41,35 @@ const showMessage = (message, sender) => {
 
 //to update the option for music style Study
 const updateStudy = () => {
-  const selectStudy = document.getElementById("selectStudy");
-  if (selectStudy.value === "brain") {
+  const selectStudy = document.getElementById('selectStudy');
+  if (selectStudy.value === 'brain') {
     userReply(`Brain Power`);
     setTimeout(playMusic, 1000);
-  } else if (selectStudy.value === "relaxing") {
+  } else if (selectStudy.value === 'relaxing') {
     userReply(`Relaxing`);
     setTimeout(playMusic, 1000);
-  } else if (selectStudy.value === "focus") {
+  } else if (selectStudy.value === 'focus') {
     userReply(`Focus`);
     setTimeout(playMusic, 1000);
   } else {
-    alert("Not a valid option!");
+    alert('Not a valid option!');
   }
 };
 
 //to update the option for music style Party
 const updateParty = () => {
-  const selectParty = document.getElementById("selectParty");
-  if (selectParty.value === "ninety") {
+  const selectParty = document.getElementById('selectParty');
+  if (selectParty.value === 'ninety') {
     userReply(`90’s party`);
     setTimeout(playMusic, 1000);
-  } else if (selectParty.value === "eighty") {
+  } else if (selectParty.value === 'eighty') {
     userReply(`80’s party`);
     setTimeout(playMusic, 1000);
-  } else if (selectParty.value === "millenium") {
+  } else if (selectParty.value === 'millenium') {
     userReply(`2000’s hits`);
     setTimeout(playMusic, 1000);
   } else {
-    alert("Not a valid option!");
+    alert('Not a valid option!');
   }
 };
 
@@ -78,20 +77,20 @@ const updateParty = () => {
 
 // show the first question after clicking to the start button
 startButton.onclick = () => {
-  startPage.style.display = "none";
+  startPage.style.display = 'none';
   setTimeout(greeting, 1000);
 };
 
 // Question 1
 const greeting = () => {
-  showMessage(`Hello stranger! What's your name?`, "bot");
+  showMessage(`Hello stranger! What's your name?`, 'bot');
 };
 
 const userReply = (input) => {
-  showMessage(input, "user");
+  showMessage(input, 'user');
 };
 
-sendBtn.addEventListener("click", () => {
+sendBtn.addEventListener('click', () => {
   userReply(userInput.value);
   setTimeout(pickColor, 1000);
 });
@@ -100,29 +99,29 @@ sendBtn.addEventListener("click", () => {
 const pickColor = () => {
   showMessage(
     `Nice to meet you ${userInput.value}. What is your favorite color?`,
-    "bot"
+    'bot'
   );
   inputWrapper.innerHTML = `
   <button id= "pinkBtn"> Pink </button>    
   <button id= "greenBtn"> Green </button>
   <button id= "blackBtn"> Black </button>
   `;
-  const pinkBtn = document.getElementById("pinkBtn");
-  const greenBtn = document.getElementById("greenBtn");
-  const blackBtn = document.getElementById("blackBtn");
+  const pinkBtn = document.getElementById('pinkBtn');
+  const greenBtn = document.getElementById('greenBtn');
+  const blackBtn = document.getElementById('blackBtn');
   pinkBtn.onclick = () => {
     //when user click on the Pink button, it's going to change background color to Pink.
-    document.body.style.backgroundColor = "pink";
+    document.body.style.backgroundColor = 'pink';
     userReply(`Pink`); //invoke userReply function with the input "Pink"
     setTimeout(pickMusicStyle, 1000); // After 1s invoke function pickMusicStyle
   };
   greenBtn.onclick = () => {
-    document.body.style.backgroundColor = "green";
+    document.body.style.backgroundColor = 'green';
     userReply(`Green`);
     setTimeout(pickMusicStyle, 1000);
   };
   blackBtn.onclick = () => {
-    document.body.style.backgroundColor = "black";
+    document.body.style.backgroundColor = 'black';
     userReply(`Black`);
     setTimeout(pickMusicStyle, 1000);
   };
@@ -132,14 +131,14 @@ const pickColor = () => {
 const pickMusicStyle = () => {
   showMessage(
     `Nice color! Now choose your favorite music style for today.`,
-    "bot"
+    'bot'
   );
   inputWrapper.innerHTML = `
   <button id= "studyBtn"> Study </button>    
   <button id= "partyBtn"> Party </button>
   `;
-  const studyBtn = document.getElementById("studyBtn");
-  const partyBtn = document.getElementById("partyBtn");
+  const studyBtn = document.getElementById('studyBtn');
+  const partyBtn = document.getElementById('partyBtn');
   studyBtn.onclick = () => {
     inputWrapper.innerHTML = ` 
       <select id="selectStudy" onchange="updateStudy()" >
@@ -167,9 +166,9 @@ const pickMusicStyle = () => {
 
 // Question 4
 const playMusic = () => {
-  showMessage(`A good choice!`, "bot");
+  showMessage(`A good choice!`, 'bot');
   setTimeout(
-    () => showMessage(`But I will play this instead! 🤖`, "bot"),
+    () => showMessage(`But I will play this instead! 🤖`, 'bot'),
     1000
   );
   inputWrapper.innerHTML = `
@@ -180,6 +179,6 @@ const playMusic = () => {
 };
 
 // prevent page refresh
-nameForm.addEventListener("submit", (event) => {
+nameForm.addEventListener('submit', (event) => {
   event.preventDefault();
 });
